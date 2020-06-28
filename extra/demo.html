@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Demo</title>
+		<meta charset="utf-8"/>
+    <script src="Parser.Bloat.js"></script>
+    <script src="WebRender.js"></script>
+    <style>
+      #render {
+        font-family: Arial;
+        padding-left: 16px; 
+      }
+      tr, td, #input {
+        height: 100%;
+      }
+      /* For printing render */
+      @media print {
+        #input {
+          display: none;
+        }
+        #markdown {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table style="width: 100%">
+      <tr>
+        <td style="width: 50%">
+          <textarea id="input" style="width: 100%"></textarea>
+        </td>
+        <td style="padding-left: 16px">
+          <div id="markdown"></div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
